@@ -1,0 +1,31 @@
+/* Hide extensions headers */
+#sidebar-header {
+	display: none !important;
+}
+
+/* Leave space for the window buttons */
+#main-window:not([sizemode="fullscreen"]) #nav-bar {
+	padding-left: 76px;
+}
+
+/* Move window buttons to the bookmarks tab */
+#TabsToolbar .titlebar-buttonbox-container {
+	visibility: visible !important;
+	position: absolute;
+	margin-top: 13px;
+}
+
+/* Harmonize bg color under window buttons */
+@media not (prefers-contrast) #navigator-toolbox:not(:-moz-lwtheme) {
+	background-color: var(--toolbar-bgcolor) !important;
+}
+
+/* Hide toolbar bottom separator */
+#navigator-toolbox {
+	border-bottom: none !important;
+}
+
+/* Place new separator on top of web content (=> no separator between sidebars and toolbar) */
+#main-window:not([sizemode="fullscreen"]) #appcontent {
+	border-top: 1px solid var(--chrome-content-separator-color);
+}
